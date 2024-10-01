@@ -1,0 +1,5 @@
+gasStation(stationID,districtID,streetAddress)
+district(districtId,managerId,city,state,zipCode)
+manager(managerId,firstName,lastName,typeId,pay)
+managerType(name,description,typeId,isHourly)
+employee(employeeId,firstName,lastName,stationId,pay,hireDate,managerId)

@@ -1,0 +1,9 @@
+As a District Manager, I want to see all my gas stations in my district so that I can see their status.
+
+As a Hiring Manager, I want to see all hired employees so that I can manage their employment
+
+As a Store Manager, I want to see all employees in my store so that I know who is working for me.
+
+As a Store Manager, I want to see all stores that I manage so that I know where to work.
+
+As an Employee, I want to see my pay information so that I can plan for my future.
