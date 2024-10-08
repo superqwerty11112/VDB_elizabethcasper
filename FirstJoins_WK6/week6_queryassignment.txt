@@ -1,0 +1,26 @@
+SELECT        TOP (200) Apartment.Apartment_ID, Apartment.Apt_Number, Apartment.Rent, Apartment.Beds, Apartment.Baths, Apartment.Sq_Ft, Apartment.Manager_ID, Apartment.Tenant_ID, Building.Building_ID, Building.Building_Name, 
+                         Building.Address_ID
+FROM            Apartment INNER JOIN
+                         Building ON Apartment.Building_ID = Building.Building_ID
+ORDER BY Building.Building_Name
+------------------------------
+SELECT        TOP (200) Person.Person_ID, Person.First_Name, Person.Last_Name, Person.Middle_Initial, Person.Address_ID, Person.Phone_Number, Address.Address_ID AS Expr1, Address.Street_1, Address.Street_2, Address.State, 
+                         Address.Zip, Address.City
+FROM            Address INNER JOIN
+                         Person ON Address.Address_ID = Person.Address_ID
+ORDER BY Person.Last_Name
+------------------------------
+SELECT        TOP (200) Building.Building_Name, Address.*
+FROM            Address INNER JOIN
+                         Building ON Address.Address_ID = Building.Address_ID
+ORDER BY Address.City
+------------------------------
+SELECT        TOP (200) Invoice.InvoiceDate, Invoice.DueDate, Invoice.Apartment_ID, Invoice.InvoiceID, Receipt.Receipt_ID, Receipt.Invoice_ID, Receipt.ReceiptDate, Receipt.ReceiptAmount
+FROM            Invoice INNER JOIN
+                         Receipt ON Invoice.InvoiceID = Receipt.Invoice_ID
+
+------------------------------
+SELECT        TOP (200) LineItem.Qty, Product.Name, Product.Price
+FROM            LineItem INNER JOIN
+                         Product ON LineItem.Product_ID = Product.Product_ID
+WHERE        (LineItem.Invoice_ID = 1)
